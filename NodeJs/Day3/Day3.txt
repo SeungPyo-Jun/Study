@@ -1,0 +1,67 @@
+Node.js에서 메일 보내기
+
+nodemailer 모듈
+Gmail 서버를 이용하여 메일을 보낼 수 있습니다.
+
+host : smpt.mail.com 
+port : 465
+google 계정
+
+보안 수준이 낮은 앱의 엑세스 : 보안 수준이 낮은 앱 허용 -> 사용
+https://myaccount.google.com/lesssecureapps
+
+계정 액세스 사용을 허용
+https://accounts.google.com/DisplayUnlockCaptcha
+
+
+mail.html
+
+메일 보내기
+받는 사람 : [		]
+제목 : [			]
+내용 : [	   textarea	]
+
+	  [전송]
+
+
+사용자 정의 모듈
+
+var fs = require('fs'); // node 제공 모듈
+
+var 변수 = require('모듈경로'); // .js 생략가능
+
+모듈
+1. 
+module.exports = () => {
+	
+}
+
+2.
+..
+..
+module.export = 변수;
+
+
+nodemon
+node로 재 컴파일 하지 않아도 갱신될 수 있도록 만드는 모듈입니다.
+
+npm install -g nodemon
+
+node node_01.js -> 실행X
+nodemon node_01.js -> 실행
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

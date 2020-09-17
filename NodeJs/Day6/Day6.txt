@@ -1,0 +1,58 @@
+로보몽고
+https://robomongo.org/download
+
+multer 모듈
+익스프레스에서 파일을 업로드하기 위한 미들웨어입니다.
+
+1. 파일 업로드 폴더를 만듭니다.
+2. diskStorage 설정
+- destination : 저장 폴더를 설정합니다.
+- filename : 저장될 파일이름을 설정합니다.
+3. multer() : 생성자에 diskStorage 설정과 파일크기를 설정합니다.
+
+
+Moment.js
+https://momentjs.com/
+
+
+과제
+
+mail.html
+메일 보내기
+
+작성일시 : 2020-08-01 ..
+아이디 : [	]
+이메일 : [	]
+제목 : [		]
+내용 : [		] textarea
+사진 : [		]
+	[전송]
+
+
+메일 전송이 완료되었습니다.
+
+아이디 : XXXX
+이메일 : XXXXXX
+제목 : XXXXX
+내용
+XXXXXXXXXXX
+XXXXXXXxXXX
+
+[이미지]
+
+* 몽고DB에 메일 보낸 객체를 저장
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

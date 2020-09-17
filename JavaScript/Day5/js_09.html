@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로토타입의 생성</title>
+</head>
+<body>
+    <script>
+        function Dog(color, name, age){
+            this.color = color;
+            this.name = name;
+            this.age = age;
+        }
+
+        let rucy = new Dog("흰색", "루시", 9);
+        document.write("이름 : " + rucy.name + "<br>");
+        document.write("색상 : " + rucy.color + "<br>");
+        document.write("나이 : " + rucy.age + "<br>");
+        rucy.family = "포메리안";
+        rucy.breed = function(){
+            return this.color + " " + this.family;
+        }
+        document.write("종 : " + rucy.family + "<br>");
+        document.write("breed : " + rucy.breed() + "<br>");
+        let ppomi = new Dog("흰색", "뽀미", 4);
+        document.write("이름 : " + ppomi.name + "<br>");
+        document.write("색상 : " + ppomi.color + "<br>");
+        document.write("나이 : " + ppomi.age + "<br>");
+        document.write("종 : " + ppomi.family + "<br>");
+        document.write("breed : " + ppomi.breed() + "<br>");
+    </script>
+</body>
+</html>

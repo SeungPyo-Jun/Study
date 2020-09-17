@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math 객체</title>
+</head>
+<body>
+    <h2>Math 객체</h2>
+    <script>
+        document.write(Math.min() + "<br>");    // Infinity(양의 무한대)
+        document.write(Math.min(1, 10, -100, -10, 1000, 0) + "<br>"); // -100
+        document.write(Math.min(1, 10, -100, -10, "-1000", 0) + "<br>"); // -1000
+        document.write(Math.min(1, 10, -100, -10, "문자열", 0) + "<br>");  // NaN
+        document.write("<br>");
+
+        document.write(Math.max() + "<br>");    // -Infinity(음의 무한대)
+        document.write(Math.max(1, 10, -100, -10, 1000, 0) + "<br>");   // 1000
+        document.write(Math.max(1, 10, -100, -10, "-1000", 0) + "<br>");    // 10
+        document.write(Math.max(1, 10, -100, -10, "문자열", 0) + "<br>");   // NaN
+        document.write("<br>");
+
+        document.write(Math.round(10.49) + "<br>"); // 10
+        document.write(Math.round(10.5) + "<br>"); // 11
+        document.write(Math.round(-10.5) + "<br>"); // -10
+        document.write(Math.round(-10.51) + "<br>"); // -11
+        document.write("<br>");
+
+        document.write(Math.floor(10.49) + "<br>"); // 10
+        document.write(Math.floor(10.5) + "<br>"); // 10
+        document.write(Math.floor(-10.5) + "<br>"); // -11
+        document.write(Math.floor(-10.51) + "<br>");    // -11
+        document.write("<br>");
+
+        document.write(Math.ceil(10.49) + "<br>");  // 11
+        document.write(Math.ceil(10.5) + "<br>");  // 11
+        document.write(Math.ceil(-10.5) + "<br>");  // -10
+        document.write(Math.ceil(-10.51) + "<br>");  // -10
+    </script>
+</body>
+</html>

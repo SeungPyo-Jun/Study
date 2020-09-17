@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 객체 선택 방법</title>
+    <script>
+        window.onload = function(){
+            let frm1 = document.frm1;
+            let frm2 = document.frm2;
+            console.log(frm1.search.placeholder);
+            console.log(frm2.userid.placeholder);
+            console.log(document.forms[0].elements[0].placeholder);
+            console.log(document.forms[1][1].placeholder);
+            console.log(document.forms['frm1'].elements['search'].placeholder);
+        }
+
+    </script>
+</head>
+<body>
+    <h2>form 객체 선택 방법</h2>
+    <form name="frm1">
+        <input type="search" name="search" placeholder="검색어 입력"><br>
+        <input type="submit" value="확인"><br>
+    </form>
+    <form name="frm2">
+        <input type="text" name="userid" placeholder="아이디 입력"><br>
+        <input type="password" name="userpw" placeholder="패스워드 입력"><br>
+        <input type="submit" value="확인">
+    </form>
+</body>
+</html>

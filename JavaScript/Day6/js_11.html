@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByClassName</title>
+</head>
+<body>
+    <h2>getElementsByClassName</h2>
+    <ul>
+        <li>류정원</li>
+        <li class="even">김사과</li>
+        <li>반하나</li>
+        <li class="even">오렌지</li>
+        <li>이메론</li>
+    </ul>
+    <script>
+        /*
+            class가 even인 데이터의 이름을 deeppink 색상으로 변경
+        */
+        let selClass = document.getElementsByClassName("even");
+        for(let i=0; i<selClass.length; i++){
+            selClass.item(i).style.color = "deeppink";
+        }
+    </script>
+</body>
+</html>

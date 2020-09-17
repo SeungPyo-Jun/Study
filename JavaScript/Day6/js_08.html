@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>history</title>
+</head>
+<body>
+    <h2>history</h2>
+    <button onclick="goBack()">뒤로</button>
+    <button onclick="go(0)">새로고침1</button>
+    <button onclick="location.reload()">새로고침2</button>
+    <button onclick="goForward()">앞으로</button>
+    <script>
+        function goBack(){
+            history.back();
+        }
+        function go(){
+            history.go(0); // 양수 X 음수 또는 0(새로고침)
+        }
+        function goForward(){
+            history.forward();
+        }
+    </script>
+</body>
+</html>

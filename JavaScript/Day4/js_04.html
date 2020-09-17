@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가위바위보 게임</title>
+</head>
+<body>
+    <h2>가위바위보 게임</h2>
+    <script>
+        while(true){
+            var user = prompt("가위바위보 중 하나를 선택하세요.");
+            var com = Math.floor(Math.random() * 3) + 1;
+
+            switch(com){
+                case 1:
+                    com = "가위";
+                    break;
+                case 2:
+                    com = "바위";
+                    break;
+                case 3:
+                    com = "보";
+                    break;
+            }
+
+            switch(user){
+                case "가위":
+                    if(com == "가위"){
+                        result = "비겼습니다.";
+                    }else if(com == "바위"){
+                        result = "컴퓨터 승!";
+                    }else if(com == "보"){
+                        result = "유저 승!";
+                    }
+                    break;
+                case "바위":
+                    if(com == "가위"){
+                        result = "유저 승!";
+                    }else if(com == "바위"){
+                        result = "비겼습니다.";
+                    }else if(com == "보"){
+                        result = "컴퓨터 승!";
+                    }
+                    break;
+                case "보":
+                    if(com == "가위"){
+                        result = "컴퓨터 승!";
+                    }else if(com == "바위"){
+                        result = "유저 승!";
+                    }else if(com == "보"){
+                        result = "비겼습니다.";
+                    }
+                    break;
+            }
+
+            alert("유저 : " + user + "\n컴퓨터 : " + com + "\n" + result);
+            if(result == "유저 승!") break;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소의 제거</title>
+    <script>
+        function remove(){
+            let text = document.getElementById("text");
+            text.removeAttribute("style");
+        }
+    </script>
+</head>
+<body>
+    <h2>요소의 제거</h2>
+    <button onclick="remove()">속성 노드 삭제</button>
+    <p id="text" style="color: deeppink; background-color: gold;">이 문장의 속성이 제거됩니다.</p>
+</body>
+</html>

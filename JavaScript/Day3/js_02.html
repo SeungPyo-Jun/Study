@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while 문</title>
+</head>
+<body>
+    <h2>while 문</h2>
+    <script>
+        var i = 1;
+        var sum = 0;    // 55
+        while(i <= 10){
+            sum += i;   // sum = sum + i;
+            /*
+                sum = 0 + 1;
+                sum = 1 + 2;
+                sum = 3 + 3;
+                sum = 6 + 4;
+                sum = 10 + 5;
+                sum = 15 + 6;
+                sum = 21 + 7;
+                sum = 28 + 8;
+                sum = 36 + 9;
+                sum = 45 + 10;
+            */
+            i++;
+        }
+        document.write("1~10의 총합은 : " + sum + "<br>");
+    </script>
+</body>
+</html>

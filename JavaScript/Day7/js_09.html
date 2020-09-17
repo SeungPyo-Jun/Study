@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노드의 복제</title>
+</head>
+<body>
+    <h2>노드의 복제</h2>
+    <h3 id="item">JavaScript</h3>
+    <div id="list">
+        <p>HTML</p>
+        <p>CSS</p>
+        <p>jQuery</p>
+    </div>
+    <button onclick="cloneElement()">노드 복제</button>
+    <script>
+        function cloneElement(){
+            let parent = document.getElementById("list");
+            let originItem = document.getElementById("item");
+            parent.appendChild(originItem.cloneNode(true));
+        }
+    </script>
+</body>
+</html>

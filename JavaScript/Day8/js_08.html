@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버블링 전파 방식</title>
+    <style>
+        #divBox {
+            width: 100%;
+            height: 100px;
+            border: 3px solid red;
+        }
+        #pBox {
+            width: 70%;
+            height: 50px;
+            border: 3px solid blue;
+        }
+        #spanBox {
+            border: 3px solid green;
+        }
+    </style>
+</head>
+<body>
+    <h2>버블링 전파 방식</h2>
+    <div id="divBox">
+        <p id="pBox">박스 안의 여러 곳을 <span id="spanBox">클릭</span>하세요.</p>
+    </div>
+    <p id="text"></p>
+    <script>
+        document.getElementById("divBox").addEventListener("click", clickDiv);
+        function clickDiv(e){
+            document.getElementById("text").innerHTML += "div 요소를 클릭했어요.<br>";
+        }
+        document.getElementById("pBox").addEventListener("click", clickP);
+        function clickP(e){
+            document.getElementById("text").innerHTML += "p 요소를 클릭했어요.<br>";
+        }
+        document.getElementById("spanBox").addEventListener("click", clickSpan);
+        function clickSpan(e){
+            document.getElementById("text").innerHTML += "span 요소를 클릭했어요.<br>";
+        }
+    </script>
+</body>
+</html>

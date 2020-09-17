@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attribute 와 property 의 차이</title>
+    <script src="../jquery-3.5.1.min.js"></script>
+    <script>
+        $(function(){
+            console.log($("input:checkbox").eq(0).attr("checked"));
+            // checked = "checked"
+            console.log($("input:checkbox").eq(0).prop("checked"));
+
+            $("input:checkbox").eq(0).attr("checked", "checked");
+            // checked = "checked"
+            $("input:checkbox").eq(1).prop("checked", true);
+
+            console.log($("input:checkbox").eq(0).attr("checked"));
+            console.log($("input:checkbox").eq(1).prop("checked"));
+        });
+    </script>
+</head>
+<body>
+    <h2>attribute 와 property 의 차이</h2>
+    <input type="checkbox" id="javascript"><label for="javascript">javascript</label> 
+    <input type="checkbox" id="jquery"><label for="jquery">jquery</label>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소의 삭제</title>
+    <script src="../jquery-3.5.1.min.js"></script>
+    <script>
+        $(function(){
+            let data;
+            $("#detachBtn").on("click", function(){
+                data = $(".content").detach();
+            });
+            $("#restoreBtn").on("click", function(){
+                $("#container").append(data);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>요소의 삭제</h2>
+    <div id="container">
+        <div>첫번째 콘텐츠</div>
+        <div class="content">두번째 콘텐츠</div>
+        <div class="content">세번째 콘텐츠</div>
+    </div>
+    <p><button id="detachBtn">div 요소 삭제</button> <button id="restoreBtn">div 요소 복구</button></p>
+</body>
+</html>

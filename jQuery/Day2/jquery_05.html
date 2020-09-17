@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소의 대체</title>
+    <script src="../jquery-3.5.1.min.js"></script>
+    <script>
+        $(function(){
+            $("button").on("click", function(){
+                $("#firstItem").replaceAll(".item");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>요소의 대체</h2>
+    <ul id="list">
+        <li class="item" id="firstItem">첫번째 아이템</li>
+        <li class="item" id="secondItem">두번째 아이템</li>
+        <li class="item" id="thirdItem">세번째 아이템</li>
+    </ul>
+    <button>아이템 대체</button>
+</body>
+</html>

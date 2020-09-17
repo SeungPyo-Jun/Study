@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+</head>
+<body>
+    <h2>배열</h2>
+    <script>
+        var arr1 = ["김사과", 20, 160.5, true];
+        document.write(arr1 + "<br>");
+        arr1.push("여자");
+        document.write(arr1 + "<br>");
+        arr1.pop();
+        document.write(arr1 + "<br>");
+        arr1.shift();
+        document.write(arr1 + "<br>");
+
+        var arr2 = Array("a", "b", "c");
+        arr1 = arr1.concat(arr2);
+        document.write(arr1 + "<br>");
+        arr1 = arr1.join("|");
+        document.write(arr1 + "<br>");
+        arr2.reverse();
+        document.write(arr2 + "<br>");
+        arr2.sort();
+        document.write(arr2 + "<br>");
+    </script>
+</body>
+</html>

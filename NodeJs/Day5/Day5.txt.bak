@@ -1,0 +1,200 @@
+NoSQL
+Not Only SQL의 약자입니다. 기존의 RDBMS의 한계를 극복하기 위해 만들어진 새로운 형태의 데이터베이스입니다. 관계형 DB가 아니므로, RDBMS처럼 고정된 스키마 및 JOIN문이 존재하지 않습니다.
+
+
+
+
+MongoDB 환경설정(환경변수 등록)
+시스템 -> 고급시스템 설정 -> 환경변수 -> 시스템 변수 path를 찾아 편집 -> 새로만들기 -> C:\Program Files\MongoDB\Server\4.2\bin 를 추가
+
+* 명령 프롬프트(검색 - cmd) -> mongo 를 실행하면 정상적으로 환경설정이 완료되었는지 확인할 수 있습니다.
+
+MongoDB의 특징
+1. NoSQL이기 때문에 관계형 데이터베이스의 테이블 개념이 없습니다.
+2. 데이터가 모인 하나의 단위를 컬렉션이라고 부릅니다.
+3. 데이터를 정해 놓은 컬럼의 형태로 컬렉션에 넣어야 한다는 제약이 없습니다.
+4. MongoDB의 데이터베이스는 컬렉션의 집합이라고 할 수 있습니다.
+5. 컬렉션은 여러개의 문서 객체를 가질 수 있습니다. 문서 객체는 속성들의 집합으로서 한 사람의 이름, 나이 등을 저장하고 있는 하나의 문서 객체를 만든 후 그 안에 자바스크립트 객체와 같이 속성들을 추가하여 저장할 수 있습니다.
+* 객체(문서) -> 컬렉션 -> 데이터베이스
+
+Collection
+MongoDB의 Document의 그룹입니다. Collection 내부에 Document들이 위치하고 있습니다. RDBMS의 table과 약간 비슷한 개념이지만 RDBMS와 달리 스키마를 따로 가지지 않습니다. Document들이 동적인 스키마를 가지고 있기 때문입니다.
+
+Document
+RDBMS의 record와 비슷한 개념입니다. 데이터 구조는 한개 이상의 key-value-pair로 이루어져 있습니다. Document는 동적인 스키마를 가지고 있습니다. 같은 collection 안에 있는 document끼리 다른 스키마를 가지고 있을 수 있습니다.
+
+데이터베이스 생성 및 사용
+데이터베이스 확인
+show dbs
+
+데이터베이스 생성
+use 데이터베이스명
+예) use nodedb
+* 데이터베이스의 자료가 없을 경우 나타나지 않습니다.
+
+컬렉션 생성
+db.createCollection("컬렉션명")
+예) db.createCollection("testCollection")
+
+컬렉션 확인
+show collections
+
+컬렉션 삭제
+db.컬렉션명.drop()
+예) db.testCollection.drop()
+
+실습
+db.createCollection("member")
+
+
+Document 추가
+db.컬렉션명.insert(자바스크립트의 객체)
+예) db.member.insert({"userid":"apple","name":"김사과"})
+
+db.member.insert({"userid":"banana","name":"반하나"})
+db.member.insert({"userid":"orange","name":"오렌지", "age":25})
+db.member.insert({"userid":"melon","name":"이메론","age":21})
+db.member.insert({"userid":"cherry","name":"채리","age":28,"gender":"여자"})
+db.member.insert({"userid":"avocado","name":"안카도","age":28,"gender":"남자"})
+db.member.insert({"userid":"blueberry","name":"배리","age":24,"gender":"남자"})
+db.member.insert({"userid":"coconut","name":"고코넛","age":27,"gender":"여자"})
+
+Document 확인
+db.컬렉션명.find()
+예) db.member.find()
+{ "_id" : ObjectId("5f1d1a9cdb052ce6e25088cf"), "userid" : "apple", "name" : "김사과" }
+db.컬렉션명.find().pretty()
+예) db.member.find().pretty()
+db.컬렉션명.find(자바스크립 객체).pretty()
+예 db.member.find({"userid":"orange"}).pretty()
+
+Document 비교연산
+$eq : 주어진 값과 일치하는 값을 찾습니다.
+$gt : 주어진 값보다 큰 값을 찾습니다.
+$gte : 주어진 값보다 크거나 같은 값을 찾습니다.
+$lt : 주어진 값보다 작은 값을 찾습니다.
+$lte : 주어진 값보다 작거나 같은 값을 찾습니다.
+$ne : 주어진 값과 일치하지 않는 값을 찾습니다.
+$in : 주어진 배열 안에 속하는 값을 찾습니다.
+$nin : 주어진 배열 안에 속하지 않는 값을 찾습니다.
+
+예) 나이가 26살보다 적은 멤버를 검색합니다.
+db.member.find({"age":{$lt:26}}).pretty()
+
+Document 논리연산
+$or : 주어진 조건 중 하나라도 true일 때 true인 결과를 찾습니다.
+$and : 주어진 모든 조건이 true일 때 true인 결과를 찾습니다.
+$not : 주어진 조건이 false일 때 true, true일 때 false인 결과를 찾습니다.
+$nor : 주어진 모든 조건이 다를 때 true, 같을 때 false인 결과를 찾습니다.
+
+예) 아이디가 "melon"이고 이름이 "이메론"인 멤버를 검색합니다.
+db.member.find({$and:[{"userid":"melon"}, {"name":"이메론"}]}).pretty()
+
+
+문제
+1. 이름이 "안카도"인 멤버를 검색합니다.
+db.member.find({"name":"안카도"}).pretty()
+2. 나이가 25살보다 크거나 같은 멤버를 검색합니다.
+db.member.find({"age":{$gte:25}}).pretty()
+3. 아이디가 "apple" 이거나 "banana"인 멤버를 검색합니다.
+db.member.find({$or:[{"userid":"apple"},{"userid":"banana"}]}).pretty()
+4. 아이디가 "cherry" 이고 나이가 21살인 멤버를 검색합니다.
+db.member.find({$and:[{"userid":"cherry"},{"age":21}]}).pretty()
+5. 성별이 남자이고 나이가 25살 이상인 멤버를 검색합니다.
+db.member.find({$and:[{"gender":"남자"},{"age":{$gte:25}}]}).pretty()
+
+http://st.koreaedugroup.com/
+코리아it아카데미 / 강남지점 / 전화번호
+
+
+Document sort(정렬)
+db.컬렉션명.find().sort(자바스크립트 객체)
+* {key:value} : key는 데이터의 field 이름이고, value의 값은 1 또는 -1입니다. 1로 설정하면 오름차순이고, -1로 설정하면 내림차순으로 정렬됩니다. 또한 여러 key를 입력할 수 있고, 먼저 입력한 key가 우선권을 갖습니다.
+
+예) db.member.find().sort({"_id":1}).pretty()
+
+
+Document 개수의 제한
+limit() : 출력할 데이터 개수를 제한할 때 사용합니다.
+db.컬렉션명.find().limit(출력할 개수)
+
+예) db.member.find().limit(3).pretty()
+
+Document 데이터 생략 후 출력
+skip() : 출력할 데이터의 시작부분을 설정할 경우 사용됩니다.
+db.컬렉션명.find().skip(생략할 개수)
+
+예) db.member.find().skip(2)
+
+
+문제
+member 컬렉션을 데이터를 아래와 같이 순서에 따라 출력하려고 합니다. 
+
+1. 
+고코넛
+배리
+안카도
+db.member.find().sort({"_id":-1}).limit(3)
+
+2.
+채리
+이메론
+오렌지
+db.member.find().sort({"_id":-1}).skip(3).limit(3)
+
+3.
+반하나
+김사과
+db.member.find().sort({"_id":-1}).skip(6).limit(3)
+
+* db.member.find().sort({"_id":-1}).skip((x-1)*3).limit(3)
+
+
+Document Update
+1. 특정 field 업데이트
+db.컬렉션명.update(변경할 객체, {$set:바뀔 객체})
+예)
+db.member.update({"userid":"blueberry"},{$set:{name:"배애리"}})
+
+2. document replace
+db.컬렉션명.update(변경할 객체, 바뀔 객체)
+예)
+db.member.update({"userid":"avocado"}, {"userid":"avocado","name":"안복도",age:30,score:0})
+* 새로운 document로 replace 할 때, _id는 바뀌지 않습니다.
+
+3. 특정 field를 제거
+db.컬렉션명.update(변경할 객체, {$unset:{제거할 객체}})
+예)
+db.member.update({name:"안복도"}, {$unset:{score:1}})
+* score: 1은 true의 의미입니다.
+
+4. 특정 document가 존재하지 않을 경우 새로 추가
+db.컬렉션명.update(추가할 객체, 추가할 객체 ..., {upsert: true})
+예)
+db.member.update({userid:"lime"}, {name:"라임", age:23, score:100, gender:"여자"}, {upsert: true})
+
+5. 여러 document의 특정 field를 수정
+db.컬렉션명.update( 적용할 객체, $set:{수정할 객체}, {multi: true})
+예)
+// age가 21살보다 크거나 같은 document의 score를 10으로 설정
+db.member.update({age:{$gte:21}}, {$set:{score:10}}, {multi:true})
+
+
+Document 삭제
+db.컬렉션명.remove(자바스크립트 객체)
+예) db.member.remove({"name":"라임"})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

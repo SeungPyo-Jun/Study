@@ -1,0 +1,18 @@
+
+static() : 모델 객체에서 사용할 수 있는 함수를 등록합니다. 함수의 이름과 함수 객체를 파라미터로 전달합니다.
+method() : 모델 인스턴스 객체에서 사용할 수 있는 함수를 등록합니다. 함수의 이름과 함수 객체를 파라미터로 전달합니다.
+
+passport 메소드
+serializeUser() : 사용자가 인증 성공시 사용자 정보를 이용하여 세션을 만듭니다.
+deserializeUser() : 사용자가 페이지 접근시 세션을 관리합니다.
+
+
+로컬 계정 관리를 위한 LocalStrategy 객체
+LocalStrategy({
+	usernameField: 아이디(계정) 필드,
+	passwordField: 비밀번호 필드,
+	passReqToCallback: Req객체를 사용할지 여부
+}, (req객체, 아이디 필드, 비밀번호 필드, 콜백) => {
+	
+}
+

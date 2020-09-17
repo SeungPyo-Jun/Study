@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소의 삭제</title>
+    <script src="../jquery-3.5.1.min.js"></script>
+    <style>
+        div { border: 3px solid red; margin: 10px }
+        #container { border: 3px solid deepskyblue }
+    </style>
+    <script>
+        $(function(){
+            $("button").on("click", function(){
+                $("span").unwrap();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>요소의 삭제</h2>
+    <div id="container">
+        <div><span>첫번째</span> 콘텐츠</div>
+        <div><span>두번째</span> 콘텐츠</div>
+        <div><span>세번째</span> 콘텐츠</div>      
+    </div>
+    <p><button>부모 요소 삭제</button></p>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="myForm">
+        <p><label>네이버 <input type="radio" value="naver" name="site" checked></label></p>
+        <p><label>다음 <input type="radio" value="daum" name="site" ></label></p>
+        <p><label>구글 <input type="radio" value="google" name="site" ></label></p>
+        <p><label>location? <input type="radio" value="location" name="site" ></label></p>
+        <p><input type="button" onclick="sendit()" value="이동"></p>
+    </form>
+    <script>
+        function sendit(){
+            let frm = document.myForm;
+            if(frm.site.value == "naver"){
+                location.href="https://www.naver.com";
+            }else if(frm.site.value == "daum"){
+                location.href="https://www.daum.net";
+            }else if(frm.site.value == "google"){
+                location.href="https://www.google.com";
+            }else{
+                location.href="js_06.html";
+            }
+        }
+    </script>
+</body>
+</html>

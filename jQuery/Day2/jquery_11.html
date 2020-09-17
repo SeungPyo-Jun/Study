@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>형제 요소의 탐색</title>
+    <style>
+        .container * {
+            display: block;
+            border: 1px solid deepskyblue;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+    <script src="../jquery-3.5.1.min.js"></script>
+    <script>
+        $(function(){
+            $("button").on("click", function(){
+                // $("h4").siblings().css({"border":"3px solid red"}); // 형제를 모두 선택
+                // $("h4").next().css({"border":"3px solid red"}); // 다음 형제를 선택
+                // $("h4").nextAll().css({"border":"3px solid red"}); // 다음 형제를 모두 선택
+                $("h4").nextUntil("p").css({"border":"3px solid red"});
+            })
+        });
+    </script>
+</head>
+<body>
+    <h2>형제 요소의 탐색</h2>
+    <div class="container">
+        <div>div 요소</div>
+        <h2>h2 요소</h2>
+        <h3>h3 요소</h2>
+        <h4>h4 요소(기준)</h2>
+        <h5>h5 요소</h2>
+        <h6>h6 요소</h2>
+        <p>p 요소</p>
+    </div>
+    <button>h4 요소의 형제 요소</button>
+</body>
+</html>

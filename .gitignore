@@ -1,0 +1,5 @@
+# no .zip files
+*.zip
+
+# no node_module
+node_modules/

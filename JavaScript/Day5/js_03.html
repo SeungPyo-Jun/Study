@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+</head>
+<body>
+    <h2>function</h2>
+    <script>
+        function func1(){
+            return "JavaScript";
+        }
+
+        var str = func1();
+        document.write("리턴된 값은 : " + str + "<br>");
+
+        function func2(start, end){
+            var sum = 0;
+            for(var i=start; i<=end; i++){
+                sum += i;
+            }
+            return sum;
+        }
+
+        var num1 = Number(prompt("시작값을 입력하세요."));
+        var num2 = Number(prompt("종료값을 입력하세요."));
+        var result = func2(num1, num2);
+        document.write("1부터 10까지의 총합 : " + result);
+
+    </script>
+</body>
+</html>

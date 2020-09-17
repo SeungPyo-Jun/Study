@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>option 객체</title>
+    <script>
+        window.onload = function(){
+            let frm = document.frm;
+            let date = new Date();
+            let year = date.getFullYear();  // 2020
+            for(let i=1900; i<=year; i++){
+                frm.y.add(new Option(i, i));
+            }
+            for(let i=1; i<=12; i++){
+                frm.m.add(new Option(i, i));
+            }
+            frm.sub.length = 3;
+        }
+
+        function selYear(){
+            let frm = document.frm;
+            let selectYear = frm.y.selectedIndex;
+            let selectYearValue = frm.y.options[selectYear].value;
+            //alert(selectYearValue);
+            if(selectYearValue == "#"){
+                alert("년도를 선택해주세요.");
+            }else{
+                alert("선택한 년도는 " + selectYearValue + "년 입니다.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>option 객체</h2>
+    <form name="frm">
+        <select name="y">
+            <option value="#">년도 선택</option>
+        </select>
+        <select name="m">
+            <option value="#">월 선택</option>
+        </select>
+        <select name="sub">
+            <option value="#">과목 선택</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">자바스크립트</option>
+            <option value="jQuery">제이쿼리</option>
+        </select>
+        <p><input type="button" onclick="selYear()" value="선택한 년도는?"></p>
+    </form>
+</body>
+</html>

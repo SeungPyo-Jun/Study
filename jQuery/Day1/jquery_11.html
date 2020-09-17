@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메소드 체이닝</title>
+    <script src="../jquery-3.5.1.min.js"></script>
+    <script>
+        $(function(){
+            console.log($("#site > a:eq(0)").attr("href")); // 매개변수 1개 -> 값을 리턴
+            $("#site > a:eq(1)").attr("href", "http://m.naver.com").text("네이버 모바일"); // 매개변수 2개 속성의 값을 설정
+            $("#site a").attr("title", function(){ // 매개변수에 해당하는 속성이 없을 경우 -> 새로 추가
+                return "새창으로 이동";
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>메소드 체이닝</h2>
+    <div id="site">
+        <a href="https://www.daum.net" target="_blank">다음</a>
+        <a href="https://www.naver.com" target="_blank">네이버</a>
+        <a href="https://www.nate.com" target="_blank">네이트</a>
+    </div>
+</body>
+</html>

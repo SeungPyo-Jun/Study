@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 타입</title>
+    <script>
+        function changeText(el){
+            el.innerHTML = "<strong>문자열의 내용이 변경되었어요.</strong>";
+        }
+    </script>
+</head>
+<body>
+    <h2>이벤트 타입</h2>
+    <p onclick="changeText(this)">이 문자열을 클릭하세요.</p>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다중 for문</title>
+</head>
+<body>
+    <h2>다중 for문</h2>
+    <script>
+/*
+        * * * * *
+        * * * * *
+        * * * * *
+        * * * * *
+        * * * * *  
+*/
+
+        for(var i=1; i<=5; i++){
+            for(var j=1; j<=5; j++){
+                document.write("* ");
+            }
+            document.write("<br>");
+        }
+    </script>
+    <br>
+    <br>
+    <script>
+/*
+        * * * * *
+        * * * * 
+        * * * 
+        * * 
+        *  
+*/
+        for(var i=1; i<=5; i++){
+            for(var j=i; j<=5; j++){
+                document.write("* ");
+            }
+            document.write("<br>");
+        }
+    </script>
+    <br>
+    <br>
+    <script>
+/*
+        * 
+        * *
+        * * *
+        * * * *
+        * * * * *  
+*/
+
+        for(var i=1; i<=5; i++){
+            for(var j=1; j<=i; j++){
+                document.write("* ");
+            }
+            document.write("<br>");
+        }
+
+    </script>
+</body>
+</html>

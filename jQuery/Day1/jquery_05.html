@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기타 선택자</title>
+    <script src="../jquery-3.5.1.min.js"></script>
+    <script>
+        $(function(){
+            $("p").css("border", "3px solid red");
+            $("#gnb").css("border", "3px solid orange");
+            $(".logo").css("border", "3px solid yellow");
+            $("#gnb > ul > li").css("border", "3px solid green");
+            $("#gnb ul").css("border", "3px solid blue");
+            $("#visual + #content").css("border", "3px solid navy");
+            $("#visual ~ #footer").css("border", "3px solid purple");
+            $("div.util").css("border", "3px solid gold");
+            $(".left,.right,#banner").css("border", "3px solid gray");
+        });
+    </script>
+</head>
+<body>
+    <h2>기타 선택자</h2>
+    <header id="header">
+        <div class="logo">로고</div>
+        <div class="util">회원가입</div>
+        <nav id="gnb">
+            <ul>
+                <li>메뉴1
+                    <ul>
+                        <li>메뉴1_1</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="visual">
+            <p>비주얼</p>
+        </div>
+        <div id="content">
+            <div class="left">왼쪽</div>
+            <div class="right">오른쪽</div>
+            <div class="util">유틸</div>
+        </div>
+        <div id="banner">배너</div>
+        <footer id="footer">푸터</footer>
+    </header>
+</body>
+</html>

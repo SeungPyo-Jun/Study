@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <style>
+        * { margin: 5px; }
+        .on {
+            background-color: gold;
+            color: white;
+        }
+    </style>
+    <script src="../jquery-3.5.1.min.js"></script>
+    <script>
+        $(function(){
+            $("#m1 button").on("click", function(){
+                alert("이벤트 연결1");
+            });
+            $("#m2").on("click", "button", function(){
+                alert("이벤트 연결2");
+            });
+            $("#m3 button").on({
+                mouseenter: function(){
+                    $(this).toggleClass("on"); // $(this).addClass("on");
+                }, mouseleave: function(){
+                    $(this).toggleClass("on"); // $(this).removeClass("on");
+                }
+            });
+            function showEvent(){
+                alert("이벤트 연결");
+            }
+            $("#m4 button").on("click", showEvent);
+            $("#m5 button").on("click", function(){
+                alert("이벤트 제거");
+            }).off();
+            $("#m6 button").one("click", function(){
+                alert("이벤트 한번만 연결");
+            });
+            $("#m7").on("click", function(){
+                $(this).find("p").css("background", "#ff0000");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>이벤트</h2>
+    <div id="m1">
+        <button>클릭 1</button>
+    </div>
+    <div id="m2">
+        <button>클릭 2_1</button>
+        <button>클릭 2_2</button>
+    </div>
+    <div id="m3">
+        <button>클릭 3</button>
+    </div>
+    <div id="m4">
+        <button>클릭 4</button>
+    </div>
+    <div id="m5">
+        <button>클릭 5</button>
+    </div>
+    <div id="m6">
+        <button>클릭 6</button>
+    </div>
+    <div id="m7">
+        <p>클릭 7</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout</title>
+</head>
+<body>
+    <h2>setTimeout</h2>
+    <script>
+        function Hi(){
+            alert("Hi ~ 반가워");
+        }
+
+        let st = window.setTimeout(Hi, 2000); // 2000 = 2초
+        //window.setTimeout("alert('Hi ~ 반가워')", 2000);
+
+        clearTimeout(st); // setTimeout으로 실행된 스케쥴을 삭제
+    </script>
+</body>
+</html>

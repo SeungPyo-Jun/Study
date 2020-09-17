@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주사위 게임</title>
+</head>
+<body>
+    <h2>주사위 게임</h2>
+    <script>
+        while(true){
+            var input = Number(prompt("주사위 숫자를 입력하세요."));
+            var dice = Math.floor(Math.random() * 6) + 1;
+            if(input == dice){
+                alert("주사위 숫자 : " + dice + "\n입력한 숫자 : " + input + "\n맞췄습니다!\n프로그램을 종료합니다.");
+                break;
+            }else{
+                alert("주사위 숫자 : " + dice + "\n입력한 숫자 : " + input + "\n틀렸습니다.!");
+            }
+        }
+    </script>
+</body>
+</html>

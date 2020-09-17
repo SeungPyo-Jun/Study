@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노드의 추가</title>
+    <script>
+        function appendNode(){
+            let parent = document.getElementById("list");
+            let criteriaItem = document.getElementById("criteria");
+            let newItem = document.getElementById("item");
+            parent.insertBefore(newItem, criteriaItem);
+        }
+    </script>
+</head>
+<body>
+    <h2>노드의 추가</h2>
+    <h3 id="item">JavaScript</h3>
+    <div id="list">
+        <p>HTML</p>
+        <p id="criteria">CSS</p>
+        <p>jQuery</p>
+    </div>
+    <button onclick="appendNode()">노드추가</button>
+</body>
+</html>

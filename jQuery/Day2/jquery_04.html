@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소의 복사</title>
+    <script src="../jquery-3.5.1.min.js"></script>
+    <script>
+        $(function(){
+            $("button").on("click", function(){
+                $("#firstItem").clone().appendTo("#list");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>요소의 복사</h2>
+    <ul id="list">
+        <li id="firstItem">첫 번째 아이템입니다.</li>
+        <li>두 번째 아이템입니다.</li>
+        <li>세 번째 아이템입니다.</li>
+    </ul>
+    <button>아이템 복사</button>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소의 삭제</title>
+    <script src="../jquery-3.5.1.min.js"></script>
+    <script>
+        $(function(){
+            $("button").on("click", function(){
+                $("#container").empty();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>요소의 삭제</h2>
+    <div id="container" style="border: 3px solid deeppink; padding: 5px;">
+        <div>첫번째 콘텐츠</div>
+        <div>두번째 콘텐츠</div>
+        <div>세번째 콘텐츠</div>
+    </div>
+    <p><button>자식 요소 삭제</button></p>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+</head>
+<body>
+    <h2>배열</h2>
+    <script>
+        var cnt = Number(prompt("입력받을 숫자의 개수를 입력하세요.")); // 4
+        var num = 0;
+        var arr = [];
+
+        while(num < cnt){   // 40 90 60 10
+            arr[num] = Number(prompt((num + 1) + "번째 숫자를 입력하세요."));
+            num++;
+        }
+
+        // arr = [40, 90, 60, 10];
+
+        var max = arr[0];   // 40 -> 90 
+        var min = arr[0];   // 40 -> 10
+
+        for(var i=1; i<arr.length; i++){
+            if(max < arr[i]){      // 90 < 10
+                max = arr[i];    
+            }
+            if(min > arr[i]){       // 40 > 10
+                min = arr[i];       // min = 10
+            }
+        }
+
+        document.write("입력한 수 " + arr + " 에서 가장 큰 값은 " + max + "입니다.<br>");
+        document.write("입력한 수 " + arr + " 에서 가장 작은 값은 " + min + "입니다.<br>");        
+    </script>
+</body>
+</html>

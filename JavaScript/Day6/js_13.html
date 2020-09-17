@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelectorAll</title>
+</head>
+<body>
+    <h2>querySelectorAll</h2>
+    <ul>
+        <li>류정원</li>
+        <li class="q">김사과</li>
+        <li class="q">반하나</li>
+        <li class="q">오렌지</li>
+        <li>이메론</li>
+    </ul>
+    <script>
+        var selquery = document.querySelectorAll("li.q");
+        for(let i=0; i<selquery.length; i++){
+            selquery.item(i).style.color = "deepskyblue";
+        }
+    </script>
+</body>
+</html>

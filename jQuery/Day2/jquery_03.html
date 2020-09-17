@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소의 포함</title>
+    <script src="../jquery-3.5.1.min.js"></script>
+    <style>
+        div { margin: 10px; }
+        .content { border: 3px dotted red; }
+        .wapper { border: 3px solid deepskyblue; }
+    </style>
+    <script>
+        $(function(){
+            $("button").on("click", function(){
+                
+                // $(".content").wrap("<div class='wapper'></div>"); // 각자 감쌈
+                // $(".content").wrapAll("<div class='wapper'></div>"); // 한꺼번에 감쌈
+                $(".content").wrapInner("<div class='wapper'></div>"); // 안쪽으로 감쌈
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>요소의 포함</h2>
+    <div class="content">첫 번째 콘텐츠</div>
+    <div class="content">두 번째 콘텐츠</div>
+    <button>div 요소 추가</button>
+</body>
+</html>

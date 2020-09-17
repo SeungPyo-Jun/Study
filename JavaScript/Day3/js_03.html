@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while 문</title>
+</head>
+<body>
+    <h2>while 문</h2>
+    <h3>구구단</h3>
+    <script>
+        var dan = Number(prompt("원하는 단을 입력하세요."));
+        document.write(dan + "단<br>");
+
+        /*
+            3 * 1 = 3
+            3 * 2 = 6
+        */
+        var num = 1;
+        while(num <= 9){
+            document.write(dan + " * " + num + " = " + (dan*num) + "<br>");
+            num++;
+        }
+    </script>
+</body>
+</html>

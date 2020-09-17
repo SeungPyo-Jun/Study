@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 객체</title>
+</head>
+<body>
+    <h2>이벤트 객체</h2>
+    <p><input type="button" id="target1" value="버튼1"></p>
+    <p><input type="button" id="target2" value="버튼2"></p>
+    <script>
+        let btn1 = document.getElementById("target1");
+        let btn2 = document.getElementById("target2");
+
+        btn1.addEventListener("click", btnClick);
+        btn2.addEventListener("click", btnClick);
+
+        function btnClick(e){
+            switch(e.target.id){
+                case "target1":
+                    alert("버튼1이 클릭되었어요.");
+                    break;
+                case "target2":
+                    alert("버튼2가 클릭되었어요.");
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

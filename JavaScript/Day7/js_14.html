@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script src="js/regist.js"></script>
+</head>
+<body>
+    <h2>회원가입</h2>
+    <form name="regform">
+        <p><label>아이디 : <input type="text" name="userid"></label></p>
+        <p><label>비밀번호 : <input type="password" name="userpw"></label></p>
+        <p><label>비밀번호 확인 : <input type="password" name="userpw_re"></label></p>
+        <p><label>이름 : <input type="text" name="username"></label></p>
+        <p><label>이메일 : <input type="text" name="email"></label></p>
+        <p>취미 : <label>등산<input type="checkbox" name="hobby" value="등산"></label> <label>드라이브<input type="checkbox" name="hobby" value="드라이브"></label> <label>게임<input type="checkbox" name="hobby" value="게임"></label> <label>영화감상<input type="checkbox" name="hobby" value="영화감상"></label> <label>쇼핑<input type="checkbox" name="hobby" value="쇼핑"></label></p>
+        <p><input type="button" value="전체체크" onclick="allChk()"> <input type="button" value="전체해제" onclick="allUnChk()"></p>
+        <p>성별 : 남자<input type="radio" value="남자" name="gender" checked> 여자<input type="radio" value="여자" name="gender"></p>
+        <p>주민등록번호 : <input type="text" name="ssn1" maxlength="6" onkeyup="autofoc()"> - <input type="password" name="ssn2" maxlength="7"> <input type="button" value="주민등록번호검증" onclick="ssnChk()"></p>
+        <input type="hidden" name="isSsn" value="n">
+        <p><label>우편번호 : <input type="text" name="zipcode" maxlength="5" id="sample6_postcode" readonly> <input type="button" value="우편번호 검색" onclick="sample6_execDaumPostcode()"></label></p>
+        <p><label>주소 : <input type="text" name="addr1" id="sample6_address"></label></p>
+        <p><label>상세주소 : <input type="text" name="addr2" id="sample6_detailAddress"></label></p>
+        <p><label><input type="text" name="addr3" id="sample6_extraAddress"></label></p>
+        <p><input type="button" value="가입완료" onclick="sendit()"></p>
+    </form>
+</body>
+</html>

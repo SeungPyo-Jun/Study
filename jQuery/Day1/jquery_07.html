@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input 요소의 선택</title>
+    <script src="../jquery-3.5.1.min.js"></script>
+    <script>
+        $(function(){
+            $("input:text").css("background", "red");
+            $("input:password").css("background","orange");
+            $(":button").css("background", "yellow");
+            $("input:checked + label").css("background", "green");
+            $("textarea:disabled").css("background","pink");
+        });
+    </script>
+</head>
+<body>
+    <h2>input 요소의 선택</h2>
+    <div><input type="text"></div>
+    <div><input type="password"></div>
+    <div><button>확인</button></div>
+    <div><input type="checkbox" id="css" checked="checked"><label for="css">css</label></div>
+    <div>
+        <select>
+            <option>과목선택</option>
+            <option>JavaScript</option>
+            <option selected>jQuery</option>   
+        </select>
+        <textarea col="20" rows="5" disabled="disabled">JavaScript</textarea>
+    </div>
+</body>
+</html>

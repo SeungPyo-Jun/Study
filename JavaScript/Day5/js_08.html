@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+</head>
+<body>
+    <h2>객체</h2>
+    <script>
+        let circle = {
+            color: "yellow",
+            diameter: 100,
+            radius: function(){
+                return this.diameter / 2;
+            }
+        }
+
+        console.log(circle.color);
+        console.log(circle.diameter);
+        console.log(circle.radius());
+
+        function triangle(b, h){
+            this.base = b;
+            this.height = h;
+            this.area = function(){
+                return this.base * this.height / 2;
+            }
+        }
+
+        var tg1 = new triangle(15, 15);
+        console.log(tg1.base);
+        console.log(tg1.height);
+        console.log(tg1.area());
+
+        var tg2 = new triangle(25, 10);
+        console.log(tg2.base);
+        console.log(tg2.height);
+        console.log(tg2.area());
+    </script>
+</body>
+</html>

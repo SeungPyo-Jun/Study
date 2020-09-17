@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 함수</title>
+</head>
+<body>
+    <h2>문자열 함수</h2>
+    <script>
+        var str1 = "안녕하세요. javascript";
+        // length 프로퍼티
+        console.log(str1.length);
+
+        // indexOf() 메소드
+        console.log(str1.indexOf('j')); // 7 (index는 0번부터 시작)
+        console.log(str1.indexOf('a')); // 8
+        console.log(str1.indexOf('z')); // -1
+
+        // charAt() 메소드
+        console.log(str1.charAt(8)); // a
+        
+        // includes() 메소드
+        console.log(str1.includes('java')); // true
+        console.log(str1.includes('Java')); // false
+
+        // substring(), substr() 메소드
+        console.log(str1.substring(7)); // 7부터 끝까지 문자열을 추출
+        console.log(str1.substring(7, 11)); // 7부터 11 직전까지 문자열을 추출
+        console.log(str1.substr(7, 4)); // 7부터 4개의 문자열을 추출
+
+        // split() 메소드
+        // var str1 = "안녕하세요. javascript";
+        /*
+            안녕하세요.     javascript
+            division[0]     division[1]
+        */
+        var division = str1.split(" ");
+        console.log(division[0]);
+        console.log(division[1]);
+
+        // replace() 메소드
+        console.log(str1.replace("안녕하세요.", "Hello!"));
+
+        var str2 = "         JavaScript           ";
+        
+        // trim() 메소드
+        console.log(str2.trim());
+
+        // toLowerCase(), toUpperCase() 메소드
+        console.log(str2.toLowerCase());
+        console.log(str2.toUpperCase());
+    </script>
+</body>
+</html>

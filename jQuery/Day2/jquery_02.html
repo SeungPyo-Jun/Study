@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기존 요소의 추가</title>
+    <script src="../jquery-3.5.1.min.js"></script>
+    <script>
+        $(function(){
+            $("#btn1").on("click", function(){
+                $("#firstRow").before("<tr><td>위로 추가된 셀</td><td>위로 추가된 셀</td></tr>");
+            });
+            $("#btn2").on("click", function(){
+                $("#firstRow").after("<tr><td>아래로 추가된 셀</td><td>아래로 추가된 셀</td></tr>");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>기존 요소의 추가</h2>
+    <table border="1" width="500">
+        <tr id="firstRow">
+            <td>첫번째 셀</td>
+            <td>두번째 셀</td>
+        </tr>
+    </table>
+    <button id="btn1">행을 위로 추가</button> 
+    <button id="btn2">행을 아래로 추가</button> 
+</body>
+</html>

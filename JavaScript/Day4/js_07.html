@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+</head>
+<body>
+    <h2>배열</h2>
+    <script>
+        var cnt = Number(prompt("입력받을 숫자의 개수를 입력하세요.")); // 3
+        var num = 0;
+        var arr = [];
+
+        while(num < cnt){
+            // arr[0] = Number(prompt((num + 1) + "번째 숫자를 입력하세요."));
+            // arr[1] = Number(prompt((num + 1) + "번째 숫자를 입력하세요."));
+            // arr[2] = Number(prompt((num + 1) + "번째 숫자를 입력하세요."));
+            arr[num] = Number(prompt((num + 1) + "번째 숫자를 입력하세요."));
+            num++;
+        }
+
+        for(var i=0; i<arr.length; i++){
+            document.write(arr[i] + "<br>");
+        }
+
+    </script>
+</body>
+</html>

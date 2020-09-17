@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소의 제거</title>
+    <script>
+        function removeNode(){
+            let parent = document.getElementById("list");
+            let removeItem = document.getElementById("item");
+            let result = parent.removeChild(removeItem);
+            // alert(result.nodeName);
+        }
+    </script>
+</head>
+<body>
+    <h2>요소의 제거</h2>
+    <button onclick="removeNode()">요소 노드 삭제</button>
+    <div id="list">
+        <p>HTML</p>
+        <p id="item">CSS</p>
+        <p>JavaScript</p>
+    </div>
+</body>
+</html>

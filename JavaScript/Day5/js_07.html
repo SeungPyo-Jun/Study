@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+</head>
+<body>
+    <h2>객체</h2>
+    <script>
+        let student = {
+            name: "김사과",
+            birthday: "1011",
+            hp: "01011111111",
+            gender: "여자",
+            makeId: function(){ // 생일+전화번호 조합으로 ID키값을 생성
+                return this.birthday + this.hp; 
+            }
+        }
+
+        document.write(student.makeId() + "<br>");
+        document.write(student.makeId + "<br>");
+
+
+    </script>
+</body>
+</html>

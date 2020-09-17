@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노드</title>
+    <script>
+        window.onload = function(){
+            let gnb = document.getElementById('gnb');
+            console.log(gnb.parentNode); // div
+            console.log(gnb.children[0]); // ul
+            console.log(gnb.children[0].nextElementSibling); // null
+            console.log(gnb.children[0].children[0]); // <li class="first">내용1</li>
+            console.log(gnb.children[0].children[0].nextElementSibling); // <li>내용2</li>
+            console.log(gnb.children[0].children[2].previousSibling); //  <li>내용2</li>
+            console.log(gnb.children[0].firstChild);
+        }
+    </script>
+</head>
+<body>
+    <h2>노드</h2>
+    <div>
+        <nav id="gnb">
+            <ul><li class="first">내용1</li><li>내용2</li><li>내용3</li></ul>
+        </nav>
+    </div>
+</body>
+</html>

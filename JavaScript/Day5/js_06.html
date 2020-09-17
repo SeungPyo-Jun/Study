@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+</head>
+<body>
+    <h2>객체</h2>
+    <script>
+        let dog1 = "뽀미";
+        let dog2 = {
+            name: "루시",
+            family: "포메리안",
+            color: "white",
+            age: 9,
+            weight: 2.5
+        };
+        document.write(dog1 + "<br>");
+        document.write(dog2.name + "<br>");
+        document.write(dog2.family + "<br>");
+        document.write(dog2.color + "<br>");
+        document.write(dog2.age + "<br>");
+        document.write(dog2['weight'] + "<br>");
+        document.write("<br>");
+        
+        for(let i in dog2){
+            document.write(i + " : " + dog2[i] + "<br>");
+        }
+
+    </script>
+</body>
+</html>

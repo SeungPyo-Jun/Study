@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+</head>
+<body>
+    <h2>function</h2>
+    <script>
+        function plus(num1, num2){
+            return num1 + num2;
+        }
+        function sub(num1, num2){
+            return num1 - num2;
+        }
+        function mul(num1, num2){
+            return num1 * num2;
+        }
+        function div(num1, num2){
+            return num1 / num2;
+        }
+
+        var num1 = Number(prompt("첫번째 숫자를 입력하세요."));
+        var num2 = Number(prompt("두번째 숫자를 입력하세요."));
+        var result1 = plus(num1, num2);
+        var result2 = sub(num1, num2);
+        var result3 = mul(num1, num2);
+        var result4 = div(num1, num2);
+        // 7 + 4 = 11
+        document.write(num1 + " + " + num2 + " = " + result1 + "<br>");
+        document.write(num1 + " - " + num2 + " = " + result2 + "<br>");
+        document.write(num1 + " * " + num2 + " = " + result3 + "<br>");
+        document.write(num1 + " / " + num2 + " = " + result4 + "<br>");
+    </script>
+</body>
+</html>

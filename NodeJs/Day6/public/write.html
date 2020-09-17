@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>파일 업로드</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="moment.js"></script>
+    <script>
+        $(function(){
+            let curDate = moment().format('YYYY-MM-DD HH:mm');
+            $('#createDate').attr('value', curDate);
+            $('#photoInput').change(function(){
+                readURL(this);
+            });
+        });
+
+        function readURL(input){
+            if(input.files && input.files[0]){
+                let reader = new FileReader();
+                reader.onload = function(e){
+                    $('#photoOutput').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>파일 업로드</h2>
+    <form method="post" action="/upload/write" enctype="multipart/form-data">
+        <p>작성일시 : <input type="text" name="createDate" id="createDate" readonly></p>
+        <p>제목 : <input type="text" name="title"></p>
+        <p>사진 : <input type="file" name="photo" id="photoInput"></p>
+        <p><img src="" id="photoOutput" width="200"></p>
+        <p><input type="submit" value="전송"></p>
+    </form>
+</body>
+</html>

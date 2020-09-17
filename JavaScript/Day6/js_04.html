@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date() 객체</title>
+</head>
+<body>
+    <h2>Date() 객체</h2>
+    <script>
+        document.write(new Date() + "<br>"); // 현재 시간 객체
+        document.write(new Date("May 24, 2020 14:47:00") + "<br>"); // 생성자에 날짜 문자열을 전달하면 해당 시간 객체
+        document.write(new Date(20, 5, 24) + "<br>"); // 두자리 년도를 생성자에 넣으면 1900년도 시간 객체, 자바 또는 자바스크립트의 숫자 월은 0월부터 시작
+        document.write(new Date(2020, 4, 24, 14, 53, 0) + "<br>");
+    </script>
+</body>
+</html>

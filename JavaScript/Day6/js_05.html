@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval</title>
+</head>
+<body>
+    <h2>setInterval</h2>
+    <div id="result"></div>
+    <input type="button" value="시작" onclick="startClock()">
+    <input type="button" value="중지" onclick="stopClock()">
+    <script>
+        function printTime(){
+            var today = new Date();
+            // alert(today);
+            var hh = today.getHours();
+            var mm = today.getMinutes();
+            var ss = today.getSeconds();
+            document.getElementById("result").innerHTML = hh + " : " + mm + " : " + ss;
+        }
+
+        var timeId = null;
+
+        function startClock(){
+            printTime();
+            timeId = setInterval(printTime, 1000);
+        }
+
+        function stopClock(){
+            clearInterval(timeId);
+        }
+    </script>
+</body>
+</html>

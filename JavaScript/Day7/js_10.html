@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소 노드의 교체</title>
+    <script>
+        function changeNode(){
+            let parent = document.getElementById("parent");
+            let first = document.getElementById("first");
+            let second = document.getElementById("second");
+            parent.replaceChild(second, first);
+        }
+    </script>
+</head>
+<body>
+    <h2>요소 노드의 교체</h2>
+    <div id="parent">
+        <p id="first">김사과</p>
+        <p>오렌지</p>
+        <p>반하나</p>
+    </div>
+    <p id="second">이메론</p>
+    <button onclick="changeNode()">요소 노드 교체</button>
+</body>
+</html>

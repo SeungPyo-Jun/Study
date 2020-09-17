@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByName</title>
+</head>
+<body>
+    <h2 name="first">getElementsByName</h2>
+    <ul>
+        <li name="first">류정원</li>
+        <li>김사과</li>
+        <li>반하나</li>
+        <li>오렌지</li>
+        <li>이메론</li>
+    </ul>
+    <script>
+        var selName = document.getElementsByName("first");
+        for(let i=0; i<selName.length; i++){
+            selName.item(i).style.color = "deepskyblue";
+        }
+    </script>
+</body>
+</html>

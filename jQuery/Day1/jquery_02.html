@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 태그 선택자</title>
+    <script src="../jquery-3.5.1.min.js"></script>
+    <script>
+        // css -> font-size -> jQuery -> fontSize
+        $(function(){
+            $("p").on("click", function(){
+                $("span").css("fontSize", "30px");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>HTML 태그 선택자</h2>
+    <p><span>제이쿼리</span>를 사용하면 쉽게 HTML 요소를 선택하여 선택된 요소에 특정 동작을 설정할 수 있습니다. <span>제이쿼리</span>에서는 요소를 선택하기 위해 CSS 선택자뿐만 아니라 비표준 선택자도 제공하고 있습니다.</p>
+</body>
+</html>

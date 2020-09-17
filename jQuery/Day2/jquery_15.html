@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <style>
+        body { font-size: 12px; }
+        textarea {
+            width: 300px;
+            height: 200px;
+            border: 1px solid orange;
+        }
+        textarea.on {
+            background-color: deeppink;
+            color: white;
+        }
+        #display {
+            width: 300px;
+            height: 100px;
+            word-break: break-all;
+            border: 1px solid blue;
+            overflow: auto;
+        }
+    </style>
+    <script src="../jquery-3.5.1.min.js"></script>
+    <script>
+        $(function(){
+            $("textarea").keydown(function(){
+                $(this).addClass("on");
+            }).keyup(function(){
+                $("#display").text($(this).val())
+            })
+        });
+    </script>
+</head>
+<body>
+    <h2>이벤트</h2>
+    <p><textarea></textarea></p>
+    <div id="display"></div>
+</body>
+</html>
