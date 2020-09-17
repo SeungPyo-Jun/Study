@@ -1,0 +1,19 @@
+<datalist>
+HTML5에 새로 추가된 요소로 form 요소에서 미리 지정된 옵션 목록을 제공합니다. 사용자들이 특정 글자를 입력하면 해당하는 지정된 글자를 미리 보여줍니다.
+
+<input type="text" list="datalist의 id값">
+
+<datalist id="datalist의 이름">
+<option value="datalist의 값1" label="제목1"></option>
+<option value="datalist의 값2" label="제목2"></option>
+...
+</datalist>
+
+<fieldset>, <legend>
+fieldset은 폼 요소를 그룹으로 묶을 때 사용하고, legend는 fieldset의 제목을 적을 때 사용합니다.
+
+<fieldset>
+    <legend>취미<legend>
+    ...
+    ...
+</fieldset>

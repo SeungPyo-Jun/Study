@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>absolute</title>
+    <style>
+        #wrap {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            border: 3px solid blue;
+        }
+        .box {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: deeppink;
+        }
+        #ab1 { top: 0; left: 0 }
+        #ab2 { top: 0; right: 0 }
+        #ab3 { bottom: 0; left: 0}
+        #ab4 { bottom: 0; right: 0}
+        #ab5 { top: 100px; left: 100px }
+    </style>
+</head>
+<body>
+    <h2>absolute</h2>
+    <div id="wrap">
+        <div class="box" id="ab1"></div>
+        <div class="box" id="ab2"></div>
+        <div class="box" id="ab3"></div>
+        <div class="box" id="ab4"></div>
+        <div class="box" id="ab5"></div>
+    </div>
+</body>
+</html>

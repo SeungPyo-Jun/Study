@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼</title>
+    <style>
+        input { 
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px 20px;
+            margin: 5px 0;
+            background-color: cornsilk;
+            color:darkblue;
+        }
+        input[type="text"] {
+            border: 2px solid red;
+            border-radius: 10px;
+        }
+        input[type="password"] {
+            border: none;
+            border-bottom: 2px solid blue;
+        }
+        input[type="text"]:focus { border: 2px dotted red; }
+        input[type="password"]:focus {
+            border: none;
+            border-bottom: 2px dotted blue;
+        }
+        input[type="search"]{
+            border: 2px solid green;
+            border-radius: 10px;
+            background-image: url("images/search.png");
+            background-repeat: no-repeat;
+            background-position: 0px -10px;
+            padding-left: 60px;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+            border: 2px solid yellow;
+            background-color: gold;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 2px solid pink;
+            font-size: 14px;
+            resize:both;
+        }
+        input[type="button"], input[type="reset"], input[type="submit"] {
+            width: 100px;
+            background-color: seagreen;
+            color: white;
+            padding: 16px 32px;
+            border: none;
+            margin: 5px 0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>폼</h2>
+    <form>
+        아이디 : <br>
+        <input type="text" name="userid"><br>
+        비밀번호 : <br>
+        <input type="password" name="pwd"><br>
+        검색 : <br>
+        <input type="search" name="search"><br>
+        직업 : <br>
+        <select name="job">
+            <option value="교사">교사</option>
+            <option value="공무원">공무원</option>
+            <option value="군인">군인</option>
+            <option value="자영업">자영업</option>
+            <option value="학생">학생</option>
+        </select><br>
+        <textarea name="content"></textarea><br>
+        <input type="button" value="확인"> <input type="reset" value="초기화"> <input type="submit" value="가입">
+    </form>
+</body>
+</html>

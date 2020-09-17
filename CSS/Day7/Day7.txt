@@ -1,0 +1,67 @@
+CSS 2D
+
+transform
+이차원 좌표에서 요소를 변형시키는 속성입니다. 이동, 확대, 축소, 회전, 경사등을 만들 수 있습니다.
+translate : 요소를 x축 방향이나 y축 방향으로 이동합니다.
+scale : 각도를 지정하여 요소를 확대 또는 축소 시킵니다.
+rotate : x축 방향과 y축 방향으로 요소를 회전시킵니다. (rotateX, rotateY)
+skew : x축 방향과 y축 방향으로 요소를 기울입니다.
+matrix : transform의 속성을 한꺼번에 적용합니다.
+matrix(scaleX, skewY, skewX, scaleY, translateX, translateY)
+
+* 벤더 프리픽스(vendor prefix)
+주요 웹 브라우저 공급자가 새로운 실험적인 기능을 제공할 때 이전 버전의 웹 브라우저에 그 사실을 알리기 위해 사용하는 접두사를 의미합니다. 아직 CSS 권고안에 포함되지 못한 기능이나, 포함되어 있지만 아직 완벽하게 제정된 상태가 아닌 기능을 사용할 때 벤더 프리픽스를 사용합니다. 해당 기능이 포함되지 않은 이전 버전의 웹 브라우저에서도 그 기능을 사용할 수 있습니다.
+
+https://caniuse.com/
+
+linear-gradient(시작색상, 끝색상)
+
+.gradient {
+    background: red; /* linear-gradient 속성을 지원하지 않는 모든 브라우저를 위한 코드 */
+    background: -webkit-linear-gradient(red, yellow); /* 크롬과 사파리 */
+    background: -moz-linear-gradient(red, yellow); /* 파이어폭스 */
+    background: -o-linear-gradient(red, yellow); /* 오페라 */
+    background: -ms-linear-gradient(red, yellow); /* 익스플로러 */
+    background: linear-gradient(red, yellow); /* CSS 표준 문법 */
+}
+
+* 벤더 프리픽스를 사용하는 방법은 해당 속성이 적용되지 않았을 경우 표현해야 하는 코드를 가장 먼저 작성해야 하며, 표준 문법 코드는 가장 마지막에 작성해야 합니다.
+
+
+transition
+요소에 추가할 CSS 스타일 전환 효과를 설정합니다. 추가할 전환 효과나 지속될 시간도 설정할 수 있습니다.
+transition-delay : 전환효과가 나타나기 전까지 지연시간을 설정합니다. 설정된 시간이 흐른뒤에 시작됩니다.
+transition-duration : 전환 효과가 지속될 시간을 설정합니다.
+transition-property : 요소에 추가할 전환 효과를 설정합니다.
+transition-timing-function : 전환 효과의 값을 설정합니다.
+linear : 전환 효과가 처음부터 끝까지 일정한 속도로 진행됩니다.
+ease : 기본값으로, 전환효과가 천천히 시작되어, 그 다음에는 빨라지고, 마지막에는 느려집니다.
+ease-in : 전환 효과가 천천히 시작됩니다.
+ease-out : 전환 효과가 천천히 끝납니다.
+ease-in-out : 전환 효과가 천천히 시작되어, 천천히 끝납니다.
+transition : 모든 transition 속성을 한 줄에 설정할 수 있습니다.
+
+
+CSS Animation
+요소의 현재 스타일을 다른 스타일로 천천히 변화시킬 수 있습니다. CSS3에서는 @keyframes 규칙을 사용해 애니메이션 효과를 손쉽게 적용할 수 있습니다.
+
+@keyframes 규칙
+요소의 스타일을 특정 시간까지 현재 스타일에서 설정해 놓은 새로운 스타일로 천천히 변화합니다.
+애니메이션 효과가 동작하기 위해서는 animation-name 속성을 이용하여 요소와 키프레임을 연결해 주어야 합니다. 재생이 모두 끝난 애니메이션은 요소가 맨 처음 가지고 있던 스타일로 돌아갑니다.
+
+animation-fill-mode
+애니메이션이 끝난 후 어떻게 처리할지를 설정합니다.
+none : 아무처리도 하지 않습니다.
+forwards : 애니메이션이 키프레임 100%에 도달했을 때 마지막 키프레임을 유지합니다.
+
+animation-direction
+애니메이션의 진행 방향을 정하는 속성입니다.
+reverse : 반대 순서로 진행합니다.
+alternate : 정해진 순서로 진행했다가 다시 반대 순서로 진행합니다.
+alternate-reverse : 반대 순서로 진행했다가 다시 정해진 순서로 진행합니다.
+
+animation-iteration-count : 애니메이션이 몇 번 반복될지 설정합니다.
+infinite : 무한 반복합니다.
+숫자 : 숫자만큼 반복합니다.
+
+perspective : 3D 환경을 만들기 위해 사용자의 관찰자 시점, 즉 투영점을 구체화해서 입체감을 부여하는 속성입니다. 스크린으로 부터 해당 px만큼 떨어진 곳에서 관찰자가 있다는 것을 근거로 구성합니다.

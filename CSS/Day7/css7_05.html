@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        p {
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            background-color: deepskyblue;
+            animation-name: sample;
+            animation-duration: 4s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes sample {
+            0% {
+                background-color: deepskyblue;
+                transform: translate(0,0);
+            }
+            50% {
+                background-color: deeppink;
+                transform: translate(150px, 150px);
+            }
+            100% {
+                background-color: gold;
+                transform: translate(0,0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>animation</h2>
+    <p>CSS3 animation</p>
+</body>
+</html>

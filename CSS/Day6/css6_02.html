@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>justify-content</title>
+    <style>
+        .wrapper {
+            width: 500px;
+            height: 50px;
+            margin: 0 auto;
+            display: flex;
+            border: 3px solid red;
+        }
+        .wrapper div {
+            width: 100px;
+            border: 2px solid black;
+            background-color: deepskyblue;
+        }
+        h2, h3 { text-align: center; }
+        p { font-weight: bold; text-align: center }
+        #container1 { justify-content: flex-start; }
+        #container2 { justify-content: flex-end; }
+        #container3 { justify-content: center; }
+        #container4 { justify-content: space-between; }
+        #container5 { justify-content: space-around; }
+    </style>
+</head>
+<body>
+    <h2>justify-content</h2>
+    <h3>flex-start(기본값)</h3>
+    <div id="container1" class="wrapper">
+        <div><p>1</p></div>
+        <div><p>2</p></div>
+        <div><p>3</p></div>
+    </div>
+    <h3>flex-end</h3>
+    <div id="container2" class="wrapper">
+        <div><p>1</p></div>
+        <div><p>2</p></div>
+        <div><p>3</p></div>
+    </div>
+    <h3>center</h3>
+    <div id="container3" class="wrapper">
+        <div><p>1</p></div>
+        <div><p>2</p></div>
+        <div><p>3</p></div>
+    </div>
+    <h3>space-between</h3>
+    <div id="container4" class="wrapper">
+        <div><p>1</p></div>
+        <div><p>2</p></div>
+        <div><p>3</p></div>
+    </div>
+    <h3>space-around</h3>
+    <div id="container5" class="wrapper">
+        <div><p>1</p></div>
+        <div><p>2</p></div>
+        <div><p>3</p></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 클래스</title>
+    <style>
+        a:link { color: black; }
+        .visited:visited { color: deeppink }
+        .hover:hover { color: deepskyblue }
+        .active:active { color: gold }
+        .focus:focus { background-color: aqua; } /* 모바일에서는 적용 안됨 */
+    </style>
+</head>
+<body>
+    <h2>가상 클래스</h2>
+    <p><a href="http://www.naver.com">link1</a></p>
+    <p><a href="http://www.naver.com" class="visited">link2</a></p>
+    <p><a href="http://www.naver.com" class="hover">link3</a></p>
+    <p><a href="http://www.naver.com" class="active">link4</a></p>
+    <p><input type="text" class="focus"></p>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>order</title>
+    <style>
+        #container {
+            width: 500px;
+            height: 100px;
+            margin: 0 auto;
+            display: flex;
+            border: 3px solid red;
+            align-items: center;
+        }
+        #container div {
+            width: 100px;
+            border: 2px solid black;
+            background-color: deepskyblue;
+        }
+        p { font-weight: bold; text-align: center; }
+        h2 { text-align: center;}
+        #box1 { order: 2; }
+        #box2 { order: 3; }
+        #box3 { order: 1; }
+    </style>
+</head>
+<body>
+    <h2>order</h2>
+    <div id="container">
+        <div id="box1"><p>box1</p></div>
+        <div id="box2"><p>box2</p></div>
+        <div id="box3"><p>box3</p></div>
+    </div>
+</body>
+</html>

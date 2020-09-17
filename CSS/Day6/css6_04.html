@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>align-self</title>
+    <style>
+        #container {
+            width: 500px;
+            height: 100px;
+            margin: 0 auto;
+            display: flex;
+            border: 3px solid red;
+            align-items: center;
+        }
+        #container div {
+            width: 100px;
+            border: 2px solid black;
+            background-color: deepskyblue;
+        }
+        p { font-weight: bold; text-align: center; }
+        h2 { text-align: center; }
+        #box1 { align-self: flex-end; }
+    </style>
+</head>
+<body>
+    <h2>align-self</h2>
+    <div id="container">
+        <div id="box1"><p>1</p></div>
+        <div id="box2"><p>2</p></div>
+        <div id="box3"><p>3</p></div>
+    </div>
+</body>
+</html>

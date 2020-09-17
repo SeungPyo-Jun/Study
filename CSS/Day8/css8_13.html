@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 우선순위 계산</title>
+    <style>
+        #id-style-with-important { background-color: yellow !important;}
+        .class-style { background-color: blue; } 
+        #id-style { background-color: red; }
+        div {
+            display: block;
+            padding: 30px;
+            margin: 30px;
+            background-color: white;
+        }
+        div {
+            display: block;
+            padding: 30px;
+            margin: 30px;
+            background-color: purple;
+        }
+        #id-style-2 {
+            background-color: skyblue;
+            margin: 50px;
+            padding: 50px;
+        }
+        ul { color: black } 
+        ul > li { color: aqua; }
+        .ul-class > li {
+            background-color: salmon;
+            color: deeppink;
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS 우선순위 계산</h2>
+    <div id="id-style-with-important" style="background-color: geen" id="id-style" class="class-style">
+        div 1(!important 적용 우선)
+    </div>
+    <div style="background-color: green;" id="id-style" class="class-style">
+        div 2(인라인 스타일 적용 우선)
+    </div>
+    <div id="id-style">
+        div 3(id 스타일 적용 우선 : 100점)
+    </div>
+    <div class="class-style">
+        div 4(class 스타일 적용 우선 : 10점)
+    </div>
+    <div>
+        div 5(태그에서는 마지막 적용된 스타일 우선)
+    </div>
+    <div id="id-style-2" id="id-style">
+        div 6(id나 class 속성은 같은 속성일 경우 먼저 나온 스타일이 적용)
+    </div>
+    <ul class="ul-class">
+        <li>li 1(점수에 따라 스타일이 적용)</li>
+    </ul>
+</body>
+</html>

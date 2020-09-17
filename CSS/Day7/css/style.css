@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#container {
+    width: 100%;
+}
+header {
+    width: 100%;
+    background-color: black;
+}
+nav ul {
+    height: 50px;
+    margin: 0;
+    list-style: none;
+    background-color: black;
+    color: white;
+}
+nav ul li {
+    margin: 5px;
+    padding: 10px;
+    float: left;
+}
+/* 
+    구형폰 : 320px
+    최신폰 : 360px ~ 375px
+*/
+nav, #contents {
+    width: 310px;
+    margin: 0 auto;
+}
+#intro {
+    width: 100%;
+    margin-bottom: 20px;
+}
+#intro img {
+    width: 100%;
+    padding: 10px;
+}
+#desc {
+    width: 100%;
+    padding: 10px;
+}
+footer {
+    width: 100%;
+    height: 60px;
+    padding: 20px;
+    background-color: gold;
+    color: white;
+}
+footer p {
+    text-align: center;
+}
+/*
+    일반적으로 태블릿은 모바일과 같은 레이아웃을 사용하지만 필요시 768px 작업을 합니다.
+*/
+@media screen and (min-width: 768px){
+    nav, #contents {
+        width: 750px;
+        margin: 0 auto;
+    }
+    #intro {
+        width: 100%;
+    }
+    #intro img {
+        width: 20%;
+        padding: 10px;
+    }
+    #desc {
+        width: 100%;
+        padding: 0px;
+        margin: 10px auto;
+    }
+    footer {
+        height: 100px;
+        background-color: deepskyblue;
+    }
+    footer p {
+        line-height: 65px;
+    }
+}
+/*
+    데스크탑 가로 사이즈 : 1024 ~ 1280
+*/
+@media screen and (min-width: 1024px){
+    nav, #contents {
+        width: 1000px;
+        margin: 0 auto;
+    }
+    #intro img {
+        width: 20%;
+        padding: 10px;
+        float: left;
+    }
+    #desc {
+        display: inline-block;
+        width: 250px;
+        height: 250px;
+        padding: 5px;
+        border: 1px dotted gold;
+    }
+    footer {
+        clear: both;
+        height: 120px;
+        background-color: gold;
+    }
+    footer p {
+        line-height: 75px;
+    }
+}

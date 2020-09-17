@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>visibility</title>
+    <style>
+        div {
+            background-color: aqua;
+            border: 2px solid black;
+        }
+        p.none { display: none; }
+        p.hidden { visibility: hidden; }
+    </style>
+</head>
+<body>
+    <h2>visibility</h2>
+    <p>HTML 요소 숨기기</p>
+    <div>
+        <p>아래 단락은 display 속성값을 none으로 설정했습니다.</p>
+        <p class="none">이 곳은 display 속성값을 none으로 설정했습니다.</p>
+    </div>
+    <br>
+    <div>
+        <p>아래 단락은 visibility 속성값을 hidden으로 설정했습니다.</p>
+        <p class="hidden">이 곳은 visibility 속성값을 hidden으로 설정했습니다.</p>
+    </div>
+</body>
+</html>

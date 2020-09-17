@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 우선순위 계산</title>
+    <style>
+        div > p.one {   /* 1 + 1 + 10 -> 12점 */
+            background-color: deepskyblue;
+            color: white;
+        }
+        p.two { /* 1 + 10 -> 11점 */
+            background-color: deeppink;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS 우선순위 계산</h2>
+    <div>
+        <p class="one two">우선순위</p>
+    </div>
+</body>
+</html>

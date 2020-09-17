@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        body{ margin-left: 100px; }
+        p {
+            width: 600px;
+            padding: 15px;
+            background-color: deepskyblue;
+            border: 5px solid rgba(0,0,0,0.5);
+        }
+        #trans1 {
+            -ms-transform: translate(30px, 30px);
+            -moz-transform: translate(30px, 30px);
+            -o-transform: translate(30px, 30px);
+            -webkit-transform: translate(30px, 30px);
+            transform: translate(30px, 30px);
+            background-color: deeppink;
+        }
+        /* 벤더 프리픽스 생략 */
+        #trans2 {
+            transform: rotate(60deg);
+            background-color: gold;
+        }
+        #trans3 {
+            transform: scale(0.7, 1.3);
+            background-color: orange;
+        }
+        #trans4 {
+            transform: skew(15deg, 10deg);
+            background-color: greenyellow;
+        }
+        #trans5 {
+            transform: matrix(2, 0.3, 0.2, 1.3, 150, 100);
+            /*
+                요소의 너비 2배, 높이를 1.3배 키웠으며, 기울기를 x축으로 20도, y축으로 30도 회전시키고, x축으로 150px, y축으로 100px 이동
+            */
+        }
+    </style>
+</head>
+<body>
+    <h2>transform</h2>
+    <p>original</p>
+    <p id="trans1">translate</p>
+    <p id="trans2">rotate</p>
+    <p id="trans3">scale</p>
+    <p id="trans4">skew</p>
+    <p id="trans5">matrix</p>
+</body>
+</html>
